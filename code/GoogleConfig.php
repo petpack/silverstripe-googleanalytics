@@ -13,7 +13,9 @@ class GoogleConfig extends DataObjectDecorator {
 		);
 	}
 
-	public function updateCMSFields(FieldSet $fields) {
+	// @fixme: what was the reason this function was declared
+	// as public ::updateCMSFields ?
+	public function updateCMSFields(FieldSet &$fields) {
 
 		$fields->addFieldToTab("Root", new Tab('GoogleAnalytics'));
 		$fields->addFieldToTab('Root.GoogleAnalytics', new TextField('GoogleAnalyticsCode', 'Google Analytics Code (UA-XXXXXX-X)'));

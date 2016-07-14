@@ -48,7 +48,7 @@ class GoogleAnalyzer extends DataObjectDecorator {
 		Object::add_extension('SiteTree', 'GoogleAnalyzer');
 	}
 
-	public function updateCMSFields(FieldSet $fields) {
+	public function updateCMSFields(FieldSet &$fields) {
 
 		$fields->addFieldToTab('Root', new Tab('GoogleAnalytics', 'Google Analytics'));
 		

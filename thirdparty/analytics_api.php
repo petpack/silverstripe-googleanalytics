@@ -51,7 +51,7 @@ class analytics_api {
 	 *
 	 * @param string $email The email address of your Google Analytics account
 	 * @param string $password Password for the account
-	 * @return boolean True if the login succeeded, false if not
+	 * @return SS_Boolean True if the login succeeded, false if not
 	 */
 	public function login($email, $password) {
 	//---------------------------------------------------------------------------------------------
@@ -193,7 +193,7 @@ class analytics_api {
 	 *   http://code.google.com/apis/analytics/docs/gdata/gdataReference.html#filtering
 	 *   If it's a string it's appended directly onto the url after '&filters='; if it's an analytics_filters
 	 *   object then the ->filters property of the object is appended.
-	 * @param boolean $debug If true will echo the url that is called when making a call to the 
+	 * @param SS_Boolean $debug If true will echo the url that is called when making a call to the 
 	 *   analytics API. If run from the CLI will echo it along with a linebreak; otherwise will
 	 *   put it in a <p> tag and end with a newline
 	 * @return array Returns an array indexed by the first dimension (then second dimension, etc) with
@@ -309,7 +309,7 @@ class analytics_api {
 	 * @param string $end The end date of the data to include in YYYY-MM-DD format. The default is
 	 *   yesterday.
 	 * @param string $filters The filters parameter for the call to the API
-	 * @param boolean $debug If true will echo the url that is called when making a call to the 
+	 * @param SS_Boolean $debug If true will echo the url that is called when making a call to the 
 	 *   analytics API. If run from the CLI will echo it along with a linebreak; otherwise will
 	 *   put it in a <p> tag and end with a newline
 	 * @return Returns an array containing the following: ga:visits, ga:pageviews, ga:timeOnSite,
@@ -350,7 +350,7 @@ class analytics_api {
 	 * @param string $end The end date of the data to include in YYYY-MM-DD format. The default is
 	 *   yesterday.
 	 * @param string $filters The filters parameter for the call to the API
-	 * @param boolean $debug If true will echo the url that is called when making a call to the 
+	 * @param SS_Boolean $debug If true will echo the url that is called when making a call to the 
 	 *   analytics API. If run from the CLI will echo it along with a linebreak; otherwise will
 	 *   put it in a <p> tag and end with a newline
 	 * @return Returns an array containing indexed by the account title (the same index used in the
@@ -402,8 +402,8 @@ class analytics_api {
 	/**
 	* This function formats seconds into h:m:s and comes from http://www.laughing-buddha.net/jon/php/sec2hms/
 	* 
-	* @param float $sec The number of seconds
-	* @param boolean $padHours If you want a leading zero for less than 10 hours, pass "true"
+	* @param SS_Float $sec The number of seconds
+	* @param SS_Boolean $padHours If you want a leading zero for less than 10 hours, pass "true"
 	*/
 	public function sec2hms($sec, $padHours = false) {
 	//---------------------------------------------------------------------------------------------

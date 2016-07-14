@@ -10,7 +10,7 @@ class GoogleReport extends SS_Report {
 		return "add description";
 	}
 
-	function getCMSFields() {
+	function getCMSFields($params = null) {
 		$fields = new FieldSet();
 		
 		$chart = new GooglePerformanceChart(); 
